@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 400px;
+  margin: 10% auto;
+  position: relative; }
+  .container > div {
+    height: 0;
+    width: 0;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 170px solid black;
+    position: absolute; }
+    .container > div.orange {
+      left: 0;
+      border-bottom-color: #ffab00; }
+    .container > div.red {
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -khtml-transform: rotate(180deg);
+      transform: rotate(180deg);
+      left: 100px;
+      border-bottom-color: #f90000; }
+    .container > div.purple {
+      left: 200px;
+      border-bottom-color: #711e4b; }
+    .container > div.blue {
+      border-bottom-color: #0091c9;
+      top: 170px; }
+      .container > div.blue.first {
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -khtml-transform: rotate(180deg);
+        transform: rotate(180deg);
+        left: 200px; }
+      .container > div.blue.second {
+        left: 100px; }
+    .container > div.green {
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -khtml-transform: rotate(180deg);
+      transform: rotate(180deg);
+      border-bottom-color: #10a960;
+      top: 170px; }

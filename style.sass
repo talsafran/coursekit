@@ -1,0 +1,55 @@
+*
+  margin: 0
+  padding: 0
+
+$piece-size: 100px
+$top-ratio: 1.7
+
+@mixin flip
+  -moz-transform: rotate(180deg)
+  -webkit-transform: rotate(180deg)
+  -o-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  -khtml-transform: rotate(180deg)
+  transform: rotate(180deg)
+
+.container
+  width: 400px
+  margin: 10% auto
+  position: relative
+
+  > div
+    height: 0
+    width: 0
+    border-right: $piece-size solid transparent
+    border-left: $piece-size solid transparent
+    border-bottom: $piece-size * $top-ratio solid black
+    position: absolute
+
+    &.orange
+      left: 0
+      border-bottom-color: #ffab00
+
+    &.red
+      +flip
+      left: $piece-size
+      border-bottom-color: #f90000
+
+    &.purple
+      left: $piece-size * 2
+      border-bottom-color: #711e4b
+
+    &.blue
+      border-bottom-color: #0091c9
+      top: $piece-size * $top-ratio
+
+      &.first
+        +flip
+        left: $piece-size * 2
+      &.second
+        left: $piece-size
+        
+    &.green
+      +flip
+      border-bottom-color: #10a960
+      top: $piece-size * $top-ratio
