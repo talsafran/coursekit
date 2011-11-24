@@ -12,12 +12,15 @@ $piece-height: $piece-width * $height-ratio
 $container-width: $piece-width * 4
 
 @mixin flip
-  -moz-transform: rotate(180deg)
-  -webkit-transform: rotate(180deg)
-  -o-transform: rotate(180deg)
-  -ms-transform: rotate(180deg)
-  -khtml-transform: rotate(180deg)
-  transform: rotate(180deg)
+  +rotate(180)
+
+@mixin rotate($deg)
+  -moz-transform: rotate(#{$deg}deg)
+  -webkit-transform: rotate(#{$deg}deg)
+  -o-transform: rotate(#{$deg}deg)
+  -ms-transform: rotate(#{$deg}deg)
+  -khtml-transform: rotate(#{$deg}deg)
+  transform: rotate(#{$deg}deg)
 
 .container
   width: $container-width
@@ -25,27 +28,32 @@ $container-width: $piece-width * 4
   position: relative
 
   > div
-    height: 0
-    width: 0
-    border-right: $piece-width solid transparent
-    border-left: $piece-width solid transparent
-    border-bottom: $piece-height solid black
     position: absolute
 
-    &.orange
+  .triangles
+    > div
+      height: 0
+      width: 0
+      border-right: $piece-width solid transparent
+      border-left: $piece-width solid transparent
+      border-bottom: $piece-height solid black
+      position: absolute
+
+    .orange
       left: 0
       border-bottom-color: #ffab00
 
-    &.red
+    .red
       +flip
       left: $piece-width
       border-bottom-color: #f90000
 
-    &.purple
+    .purple
       left: $piece-width * 2
       border-bottom-color: #711e4b
+      z-index: 5000
 
-    &.blue
+    .blue
       border-bottom-color: #0091c9
       top: $piece-height
 
@@ -55,16 +63,24 @@ $container-width: $piece-width * 4
       &.second
         left: $piece-width
         
-    &.green
+    .green
       +flip
       border-bottom-color: #10a960
       top: $piece-height
 
-    &.title
-      border: 0
-      width: $container-width
-      text-align: center
-      font-weight: bold
-      font-family: helvetica
-      font-size: 80px
-      top: ($piece-height * 2) + 50px
+  .circle
+    width: 200px
+    height: 200px
+    margin: ($piece-height / 8) ($piece-width / 2)
+    background: transparent
+    border: 50px solid white
+    border-radius: 999px
+
+  .title
+    border: 0
+    width: $container-width
+    text-align: center
+    font-weight: bold
+    font-family: helvetica
+    font-size: 80px
+    top: ($piece-height * 2) + 50px
