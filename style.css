@@ -64,13 +64,15 @@
       transform: rotate(180deg);
       border-bottom-color: #10a960;
       top: 170px; }
-  .container .circle {
-    width: 200px;
-    height: 200px;
-    margin: 21.25px 50px;
-    background: transparent;
-    border: 50px solid white;
-    border-radius: 999px; }
+    .container .triangles .circle {
+      width: 120px;
+      height: 120px;
+      margin: 21.25px 50px;
+      background: transparent;
+      border: 50px solid white;
+      border-radius: 999px;
+      left: 42px;
+      top: 39px; }
   .container .title {
     border: 0;
     width: 400px;
