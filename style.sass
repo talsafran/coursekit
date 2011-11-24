@@ -2,8 +2,12 @@
   margin: 0
   padding: 0
 
-$piece-size: 100px
-$top-ratio: 1.7
+$height-ratio: 1.7
+
+$piece-width: 100px
+$piece-height: $piece-width * $height-ratio
+
+$container-width: $piece-width * 4
 
 @mixin flip
   -moz-transform: rotate(180deg)
@@ -21,9 +25,9 @@ $top-ratio: 1.7
   > div
     height: 0
     width: 0
-    border-right: $piece-size solid transparent
-    border-left: $piece-size solid transparent
-    border-bottom: $piece-size * $top-ratio solid black
+    border-right: $piece-width solid transparent
+    border-left: $piece-width solid transparent
+    border-bottom: $piece-height solid black
     position: absolute
 
     &.orange
@@ -32,24 +36,33 @@ $top-ratio: 1.7
 
     &.red
       +flip
-      left: $piece-size
+      left: $piece-width
       border-bottom-color: #f90000
 
     &.purple
-      left: $piece-size * 2
+      left: $piece-width * 2
       border-bottom-color: #711e4b
 
     &.blue
       border-bottom-color: #0091c9
-      top: $piece-size * $top-ratio
+      top: $piece-height
 
       &.first
         +flip
-        left: $piece-size * 2
+        left: $piece-width * 2
       &.second
-        left: $piece-size
+        left: $piece-width
         
     &.green
       +flip
       border-bottom-color: #10a960
-      top: $piece-size * $top-ratio
+      top: $piece-height
+
+    &.title
+      border: 0
+      width: 400px
+      text-align: center
+      font-weight: bold
+      font-family: helvetica
+      font-size: 80px
+      top: ($piece-height * 2) + 50px

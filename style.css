@@ -50,3 +50,11 @@
       transform: rotate(180deg);
       border-bottom-color: #10a960;
       top: 170px; }
+    .container > div.title {
+      border: 0;
+      width: 400px;
+      text-align: center;
+      font-weight: bold;
+      font-family: helvetica;
+      font-size: 80px;
+      top: 390px; }
