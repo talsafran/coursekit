@@ -10,51 +10,60 @@
   position: relative; }
   .container > div {
     position: absolute; }
-  .container .triangles > div {
-    height: 0;
-    width: 0;
-    border-right: 100px solid transparent;
-    border-left: 100px solid transparent;
-    border-bottom: 170px solid black;
-    position: absolute; }
-  .container .triangles .orange {
-    left: 0;
-    border-bottom-color: #ffab00; }
-  .container .triangles .red {
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    transform: rotate(180deg);
-    left: 100px;
-    border-bottom-color: #f90000; }
-  .container .triangles .purple {
-    left: 200px;
-    border-bottom-color: #711e4b;
-    z-index: 5000; }
-  .container .triangles .blue {
-    border-bottom-color: #0091c9;
-    top: 170px; }
-    .container .triangles .blue.first {
+  .container .triangles {
+    -moz-transform: rotate(30.5deg);
+    -webkit-transform: rotate(30.5deg);
+    -o-transform: rotate(30.5deg);
+    -ms-transform: rotate(30.5deg);
+    -khtml-transform: rotate(30.5deg);
+    transform: rotate(30.5deg);
+    top: -80px;
+    left: 115px; }
+    .container .triangles > div {
+      height: 0;
+      width: 0;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent;
+      border-bottom: 170px solid black;
+      position: absolute; }
+    .container .triangles .orange {
+      left: 0;
+      border-bottom-color: #ffab00; }
+    .container .triangles .red {
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
       -o-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -khtml-transform: rotate(180deg);
       transform: rotate(180deg);
-      left: 200px; }
-    .container .triangles .blue.second {
-      left: 100px; }
-  .container .triangles .green {
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    transform: rotate(180deg);
-    border-bottom-color: #10a960;
-    top: 170px; }
+      left: 100px;
+      border-bottom-color: #f90000; }
+    .container .triangles .purple {
+      left: 200px;
+      border-bottom-color: #711e4b;
+      z-index: 5000; }
+    .container .triangles .blue {
+      border-bottom-color: #0091c9;
+      top: 170px; }
+      .container .triangles .blue.first {
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -khtml-transform: rotate(180deg);
+        transform: rotate(180deg);
+        left: 200px; }
+      .container .triangles .blue.second {
+        left: 100px; }
+    .container .triangles .green {
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -khtml-transform: rotate(180deg);
+      transform: rotate(180deg);
+      border-bottom-color: #10a960;
+      top: 170px; }
   .container .circle {
     width: 200px;
     height: 200px;
