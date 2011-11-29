@@ -9,13 +9,13 @@ a:visited {
   color: black;
   text-decoration: none; }
 
-.container {
+#container {
   width: 400px;
   margin: 10% auto;
   position: relative; }
-  .container > div {
+  #container > div {
     position: absolute; }
-  .container .triangles {
+  #container .triangles {
     -moz-transform: rotate(30.5deg);
     -webkit-transform: rotate(30.5deg);
     -o-transform: rotate(30.5deg);
@@ -24,17 +24,17 @@ a:visited {
     transform: rotate(30.5deg);
     top: -80px;
     left: 115px; }
-    .container .triangles > div {
+    #container .triangles > div {
       height: 0;
       width: 0;
       border-right: 100px solid transparent;
       border-left: 100px solid transparent;
       border-bottom: 170px solid black;
       position: absolute; }
-    .container .triangles .orange {
+    #container .triangles .orange {
       left: 0;
       border-bottom-color: #ffab00; }
-    .container .triangles .red {
+    #container .triangles .red {
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
       -o-transform: rotate(180deg);
@@ -43,14 +43,14 @@ a:visited {
       transform: rotate(180deg);
       left: 100px;
       border-bottom-color: #f90000; }
-    .container .triangles .purple {
+    #container .triangles .purple {
       left: 200px;
       border-bottom-color: #711e4b;
       z-index: 5000; }
-    .container .triangles .blue {
+    #container .triangles .blue {
       border-bottom-color: #0091c9;
       top: 170px; }
-      .container .triangles .blue.first {
+      #container .triangles .blue.first {
         -moz-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         -o-transform: rotate(180deg);
@@ -58,9 +58,9 @@ a:visited {
         -khtml-transform: rotate(180deg);
         transform: rotate(180deg);
         left: 200px; }
-      .container .triangles .blue.second {
+      #container .triangles .blue.second {
         left: 100px; }
-    .container .triangles .green {
+    #container .triangles .green {
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
       -o-transform: rotate(180deg);
@@ -69,7 +69,7 @@ a:visited {
       transform: rotate(180deg);
       border-bottom-color: #10a960;
       top: 170px; }
-    .container .triangles .circle {
+    #container .triangles .circle {
       width: 120px;
       height: 120px;
       margin: 21.25px 50px;
@@ -78,7 +78,7 @@ a:visited {
       border-radius: 999px;
       left: 42px;
       top: 39px; }
-  .container .title {
+  #container .title {
     border: 0;
     width: 400px;
     text-align: center;
@@ -86,3 +86,16 @@ a:visited {
     font-family: helvetica;
     font-size: 80px;
     top: 390px; }
+
+#fork-me-on-github {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.3)";
+  filter: alpha(opacity=0.3);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3; }
+  #fork-me-on-github:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; }

@@ -22,12 +22,19 @@ $container-width: $piece-width * 4
   -khtml-transform: rotate(#{$deg}deg)
   transform: rotate(#{$deg}deg)
 
+@mixin opacity($amt)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$amt})"
+  filter: alpha(opacity=#{$amt})
+  -moz-opacity: #{$amt}
+  -khtml-opacity: #{$amt}
+  opacity: #{$amt}
+
 a,
 a:visited
   color: black
   text-decoration: none
 
-.container
+#container
   width: $container-width
   margin: 10% auto
   position: relative
@@ -95,3 +102,9 @@ a:visited
     font-family: helvetica
     font-size: 80px
     top: ($piece-height * 2) + 50px
+
+#fork-me-on-github
+  +opacity(.3)
+
+  &:hover
+    +opacity(1)
